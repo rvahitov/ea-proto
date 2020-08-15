@@ -15,4 +15,10 @@
       <PackageReference Include="Akka.Remote" Version="1.4.9" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="akka.conf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
