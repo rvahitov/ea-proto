@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Shared.Messages\Shared.Messages.csproj" />
+      <ProjectReference Include="..\Shared.SystemMessages\Shared.SystemMessages.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Akka.Persistence" Version="1.4.9" />
+    </ItemGroup>
+
+</Project>

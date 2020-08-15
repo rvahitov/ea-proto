@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Common.Actors\Common.Actors.csproj" />
+      <ProjectReference Include="..\Shared.Messages\Shared.Messages.csproj" />
+      <ProjectReference Include="..\Shared.SystemMessages\Shared.SystemMessages.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Akka.Persistence" Version="1.4.9" />
+      <PackageReference Include="Akka.Remote" Version="1.4.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="akka.conf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>
