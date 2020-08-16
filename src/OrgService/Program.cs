@@ -16,7 +16,7 @@ namespace OrgService
 
             using var system = ActorSystem.Create("organizations-system", config);
 
-            var consoleWriterProps = Props.Create(() => new ConsoleWriteActor());
+            var consoleWriterProps = Props.Create(() => new ConsoleWriterActor());
             var consoleWriter = system.ActorOf(consoleWriterProps, "ConsoleWriter");
 
             var dispatcherAddress = config.GetString("akka.app.dispatcher-address");

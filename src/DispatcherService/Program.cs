@@ -15,7 +15,7 @@ namespace DispatcherService
 
             using var system = ActorSystem.Create("dispatcher-system", config);
 
-            var consoleWriterProps = Props.Create(() => new ConsoleWriteActor());
+            var consoleWriterProps = Props.Create(() => new ConsoleWriterActor());
             var consoleWriter = system.ActorOf(consoleWriterProps, "ConsoleWriter");
 
             var dispatcherProps = Props.Create(() => new DispatcherActor(consoleWriter, "Dispatcher"));

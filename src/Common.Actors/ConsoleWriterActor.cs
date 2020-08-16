@@ -4,9 +4,9 @@ using Common.Actors.Messages;
 
 namespace Common.Actors
 {
-    public sealed class ConsoleWriteActor : ReceiveActor
+    public sealed class ConsoleWriterActor : ReceiveActor
     {
-        public ConsoleWriteActor()
+        public ConsoleWriterActor()
         {
             Receive<WriteToConsole>(msg =>
             {

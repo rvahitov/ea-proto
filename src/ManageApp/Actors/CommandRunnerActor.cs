@@ -31,7 +31,6 @@ namespace ManageApp.Actors
                 ? WriteToConsole.Success( "Организация создана" )
                 : WriteToConsole.Error( $"Организация не создана. Сервер вернул ошибки: {string.Join( $"{Environment.NewLine}\t\t", msg.Errors )}" );
             _consoleWriter.Tell( write );
-            Sender.Tell( "Read" );
         }
 
         private void OnAddActor( AddActor cmd )
@@ -40,11 +39,11 @@ namespace ManageApp.Actors
             if ( serverNumber < 0 || serverNumber >= _orgServices.Length )
             {
                 _consoleWriter.Tell( WriteToConsole.Error( "Недопустимый номер сервера" ) );
-                Sender.Tell( "Read" );
                 return;
             }
 
             _orgServices[serverNumber].Tell( new CreateActorForOrganization( cmd.Organization, cmd.Color ) );
+            Sender.Tell( "Read" );
         }
     }
 }

@@ -1,31 +1,34 @@
 using System.Collections.Immutable;
 using System.Linq;
+using Akka.Actor;
 
 namespace DispatcherService
 {
     public sealed class DispatcherState
     {
-        private readonly ImmutableList<OrganizationActorMap> _maps;
+        public ImmutableList<OrganizationActorMap> Maps { get; }
 
         public DispatcherState(ImmutableList<OrganizationActorMap> maps)
         {
-            _maps = maps;
+            Maps = maps;
         }
 
         public DispatcherState()
         {
-            _maps = ImmutableList<OrganizationActorMap>.Empty;
+            Maps = ImmutableList<OrganizationActorMap>.Empty;
         }
 
-        public bool Contains(OrganizationActorMap map) => _maps.Contains(map);
+        public bool Contains(OrganizationActorMap map) => Maps.Contains(map);
 
         public DispatcherState Add(OrganizationActorMap map) =>
-            new DispatcherState(_maps.Add(map));
+            new DispatcherState(Maps.Add(map));
 
         public DispatcherState Remove(OrganizationActorMap map) =>
-            new DispatcherState(_maps.Remove(map));
+            new DispatcherState(Maps.Remove(map));
 
         public OrganizationActorMap[] FindForOrganization(string organization) =>
-            _maps.Where(m => m.Organization == organization).ToArray();
+            Maps.Where(m => m.Organization == organization).ToArray();
+
+        public OrganizationActorMap FindForActor( IActorRef actor ) => Maps.FirstOrDefault( m => m.Actor?.Equals( actor ) == true );
     }
 }

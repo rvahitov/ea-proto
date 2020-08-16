@@ -1,19 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Messages", "Shared.Messages\Shared.Messages.csproj", "{D9AFA431-85D4-4DAC-869B-D968D5754DE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Messages", "Shared.Messages\Shared.Messages.csproj", "{D9AFA431-85D4-4DAC-869B-D968D5754DE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.SystemMessages", "Shared.SystemMessages\Shared.SystemMessages.csproj", "{B1674EA7-26C0-4FE4-AA58-BF3EE767F250}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.SystemMessages", "Shared.SystemMessages\Shared.SystemMessages.csproj", "{B1674EA7-26C0-4FE4-AA58-BF3EE767F250}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Actors", "Common.Actors\Common.Actors.csproj", "{528BD46D-CF02-483E-9377-F7BA93AFAF7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Actors", "Common.Actors\Common.Actors.csproj", "{528BD46D-CF02-483E-9377-F7BA93AFAF7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispatcherService", "DispatcherService\DispatcherService.csproj", "{3B258A30-131A-4893-ACEE-371170465FB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispatcherService", "DispatcherService\DispatcherService.csproj", "{3B258A30-131A-4893-ACEE-371170465FB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrgService", "OrgService\OrgService.csproj", "{3CB21EB9-9D54-4736-9623-777F5E837FF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrgService", "OrgService\OrgService.csproj", "{3CB21EB9-9D54-4736-9623-777F5E837FF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageApp", "ManageApp\ManageApp.csproj", "{F18C6588-0DDC-42B0-998C-920199DE191D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageApp", "ManageApp\ManageApp.csproj", "{F18C6588-0DDC-42B0-998C-920199DE191D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApp", "ClientApp\ClientApp.csproj", "{851BB0CB-681C-46EA-8E62-840E06B63285}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,9 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D9AFA431-85D4-4DAC-869B-D968D5754DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -100,5 +99,23 @@ Global
 		{F18C6588-0DDC-42B0-998C-920199DE191D}.Release|x64.Build.0 = Release|Any CPU
 		{F18C6588-0DDC-42B0-998C-920199DE191D}.Release|x86.ActiveCfg = Release|Any CPU
 		{F18C6588-0DDC-42B0-998C-920199DE191D}.Release|x86.Build.0 = Release|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Debug|x64.Build.0 = Debug|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Debug|x86.Build.0 = Debug|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Release|x64.ActiveCfg = Release|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Release|x64.Build.0 = Release|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Release|x86.ActiveCfg = Release|Any CPU
+		{851BB0CB-681C-46EA-8E62-840E06B63285}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DFDA98F-315E-4F26-8A2B-765D2FE47CEE}
 	EndGlobalSection
 EndGlobal

@@ -12,7 +12,7 @@ namespace ManageApp.Actors
         {
             Receive<StartApplication>( _ =>
             {
-                var consoleWriter = Context.ActorOf( Props.Create( () => new ConsoleWriteActor() ) );
+                var consoleWriter = Context.ActorOf( Props.Create( () => new ConsoleWriterActor() ) );
                 var commandRunner = Context.ActorOf( Props.Create( () => new CommandRunnerActor( consoleWriter ) ) );
                 var commandParser = Context.ActorOf( Props.Create( () => new CommandParserActor( commandRunner, consoleWriter ) ) );
                 var commandReader = Context.ActorOf( Props.Create( () => new CommandReaderActor( commandParser ) ) );
